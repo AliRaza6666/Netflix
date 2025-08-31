@@ -1,0 +1,277 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+
+body {
+  background-color: black;
+}
+ .btn1{
+  
+  margin-right: -160px;
+padding: 10px 15px 10px 15px;
+  background-color: white;
+  border-radius: 3px;
+}
+
+.main {
+  /* without height image will not appear  */
+  height: 70vh;
+  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/826348c2-cdcb-42a0-bc11-a788478ba5a2/43af842f-13d1-4986-bb16-10ba7e3c3de1/PK-en-20240729-POP_SIGNUP_TWO_WEEKS-perspective_WEB_4d951114-b858-42cf-9ed4-fb06ad9ee502_large.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: max(1000px, 100vw);
+  position: relative;
+
+}
+
+/* we created dummy box of same size in order to give opacity */
+.main .box {
+  width: 100%;
+  height: 70vh;
+  opacity: 0.77;
+  background-color: black;
+  position: absolute;
+  top: 0;
+}
+
+nav {
+  /* max width dene k bad margin auto krne se wo chese centre mein ajati hai */
+  max-width: 80vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 62px;
+}
+
+nav img {
+  width: 150px;
+  height: 40px;
+  z-index: 1;
+  background: transparent;
+}
+
+/* .button{
+    z-index:1;
+
+} */
+/* this way we also have to give position relative  */
+nav button {
+  position: relative;
+  z-index: 1;
+}
+
+.text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  flex-direction: column;
+  /* its parent have height so we can give its hieght in percent */
+  /* nav bar is 62px and text is 100% so gap will come between main and next element due to height of text so we will subtract nav hieght from total */
+  /* height=100% */
+  height: calc(100% - 62px);
+
+  font-family: sans-serif;
+  position: relative;
+  z-index: 1;
+  gap: 10px;
+  /* for responiveness */
+  padding: 0px 20px;
+  text-align: center;
+}
+
+/* last child is aslo considered as first so this style will also be aplied to that child so we are using >  so that only upper first child is selected....etc also for other childs */
+.text> :first-child {
+  font-size: 48px;
+  font-weight: bolder;
+
+}
+
+.text> :nth-child(2) {
+  font-size: 24px;
+  font-weight: 700;
+
+
+}
+
+.text> :nth-child(3) {
+  font-size: 20px;
+  font-weight: 400;
+
+
+}
+
+.text> :nth-child(4) {
+  height: 20px;
+
+}
+
+.separation {
+  height: 2px;
+  background-color: rgb(57, 57, 57);
+}
+
+.btn {
+  /* btn size is adjusted by padding */
+
+
+  font-weight: bolder;
+  background-color: rgba(23, 23, 23, 0.5);
+  padding: 7px 15px;
+  border-radius: 4px;
+  color: white;
+  border: 1px solid;
+  cursor: pointer;
+}
+
+.redbtn {
+  background-color: rgba(255, 0, 0, 0.82);
+  color: white;
+
+  border-radius: 7px;
+
+
+}
+
+.st {
+  font-weight: 700;
+  font-size: 20px;
+
+  padding: 14px 30px;
+  border-radius: 7px;
+
+}
+
+.main input {
+
+  font-size: 18px;
+  border-radius: 4px;
+  padding: 14px 80px 14px 14px;
+  /* for making transparent */
+  background-color: rgba(23, 23, 23, 0.5);
+  margin: 10px;
+  font-weight: 500;
+  color: rgb(247, 244, 244);
+
+}
+
+.first {
+  color: rgba(255, 255, 255, 0.879);
+  max-width: 70vw;
+  margin: auto;
+  display: flex;
+  font-size: 25px;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.text2 {
+  display: flex;
+  flex-direction: column;
+}
+
+.secimg {
+  position: relative;
+  width: 100%;
+}
+
+.secimg img {
+  width: 400px;
+}
+
+.video1{
+  width: 290px;
+  position: absolute;
+  top: 98px;
+  right: 100px;
+
+}
+
+.video2 {
+
+  width: 310px;
+  position: absolute;
+  top: 90px;
+  right: 140px;
+
+
+}
+
+.first div> :first-child {
+  font-weight: bolder;
+  font-size: 48px;
+  padding: 34px  0px 0px 0px;
+}
+
+.first div:nth-child(2) {
+
+  font-size: 24px;
+}
+
+.faqs  h2{
+  color: white;
+  text-align: center;
+
+  font-size:40px ;
+
+}
+.faqbox {
+  display: flex;
+  background-color: rgb(54, 53, 53);
+  padding: 28px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 80vw;
+  margin: 20px auto;
+  color: white;
+  font-size: 30px;
+
+}
+.faqbox:hover{
+  background-color: grey;
+  cursor:pointer;
+}
+.footeritem{
+  display: flex;
+  flex-direction: column;
+}
+footer{
+  flex-wrap: wrap;
+
+}
+.footer{
+  /* top right bottom left */
+  padding: 20px 0px 100px 0px;
+  max-width: 80vw;
+  justify-items: center;
+  align-content: center;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+ 
+}
+
+.footer a{
+  color: white;
+  text-decoration: underline;
+}
+.extra{
+  max-width: 68vw;
+  margin: auto;
+  color: white;
+  text-align: centers;
+  font-size: 20px;
+  text-decoration: underline;
+  padding: 15px 2px;
+  
+}
+@media screen and (max-width: 1100px){
+  .first{
+    flex-wrap: wrap;
+  }
+  
+}
